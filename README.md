@@ -2,7 +2,7 @@
 After the connection is made with the database i made an instance of express using const app = express();
 app.use(express.json())
 
-Following this i used a get request to retrieve all the data from a table i created and named payments. The 'select * from' signifies that i am asking for all the data from the table. I could use the route "api/payments" to search for the data via postman
+Following this i used a get request to retrieve all the data from a table i created,named payments. The 'select * from' signifies that i am asking for all the data from the table. I could use the route "api/payments" to search for the data via postman
 
 For the next Get request i changed the route to "api/payments/:id" which allowed me to search for payments of a specific ID for example:
 
