@@ -41,9 +41,9 @@ app.get('/api/payments/:id', (req, res) => {
 
 app.post('/api/payments', (req, res) => {
     console.log(req.body)
-  
-var post_sql = "INSERT INTO payments SET transaction_id=\"" + req.body.transaction_id+"\",from_user=\""+req.body.from_user+"\",to_user=\""+req.body.to_user+"\",amount=\""+req.body.amount + "\"";
-con.query(post_sql,function (err, result, fields){
+    var post_sql = `INSERT INTO payments SET ?`
+//var post_sql = "INSERT INTO payments SET transaction_id=\"" + req.body.transaction_id+"\",from_user=\""+req.body.from_user+"\",to_user=\""+req.body.to_user+"\",amount=\""+req.body.amount + "\"";
+con.query(post_sql,req.body,function (err, result, fields){
   if(err){
     res.send("Post failed with: " + err)
     return
