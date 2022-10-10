@@ -59,4 +59,4 @@ con.query(post_sql,function (err, result, fields){
   })
 
 
-// Max breaking stuff or fixing it
+// Max breaking fixing it
